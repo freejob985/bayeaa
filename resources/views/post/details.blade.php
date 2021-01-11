@@ -231,6 +231,9 @@
 											<div class="row">
 												<div class="col-12 detail-line-content">
 													{!! transformDescription($post->description) !!}
+
+
+													sssssssssssssssssssssssssssasd
 												</div>
 											</div>
 											
