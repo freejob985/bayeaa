@@ -235,6 +235,7 @@
 
 													<video style="
 													width: 100%;
+													height: 350px;
 												" controls>
 														<source src="{{Request::root()}}/public/files/{{ $post->Video}}" type="video/mp4">
 														<source src="{{Request::root()}}/public/files/{{ $post->Video}}" type="video/ogg">
