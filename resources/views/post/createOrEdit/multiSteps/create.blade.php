@@ -89,10 +89,10 @@
 
 
 										<div class="form-group row required">
-											<label class="col-md-3 col-form-label" for="title">Video <sup></sup></label>
+											<label class="col-md-3 col-form-label" for="Video">Video <sup></sup></label>
 											<div class="col-md-8">
 												<input id="Video" name="Video" placeholder="Video" class="form-control "
-													   type="file" value="{{ old('title') }}">
+													   type="file" value="{{ old('Video') }}">
 											</div>
 										</div>
 
