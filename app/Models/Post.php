@@ -104,6 +104,7 @@ class Post extends BaseModel implements Feedable
 		'fb_profile',
 		'partner',
 		'created_at',
+		'Video',
 	];
 	
 	/**

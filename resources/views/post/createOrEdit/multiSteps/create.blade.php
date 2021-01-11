@@ -92,7 +92,7 @@
 											<label class="col-md-3 col-form-label" for="Video">Video <sup></sup></label>
 											<div class="col-md-8">
 												<input id="Video" name="Video" placeholder="Video" class="form-control "
-													   type="file" value="{{ old('Video') }}">
+													   type="file" value="{{ old('Video') }}" accept="video/mp4,video/x-m4v,video/*">
 											</div>
 										</div>
 

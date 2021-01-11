@@ -145,7 +145,7 @@ class CreateController extends FrontController
 
 	//	dd($request->Video	);
 
-	dd($request->all());
+	//dd($request->all());
 		// Check possible Update
 		if (!empty($tmpToken)) {
 			session()->keep(['message']);
@@ -175,6 +175,20 @@ class CreateController extends FrontController
 		}
 		
 		// New Post
+
+
+		
+        if ($request->hasFile('Video')) {
+            $file = $request->Video;
+            $extension = $file->getClientOriginalExtension();
+            $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
+            $file->move(public_path() . '/files/', $filename);
+
+        } else {
+
+            $filename="";
+		}
+		
 		$post = new Post();
 		$input = $request->only($post->getFillable());
 		foreach ($input as $key => $value) {
@@ -206,6 +220,7 @@ class CreateController extends FrontController
 		}
 		
 		// Save
+		$post->Video = $filename;
 		$post->save();
 		
 		// Save ad Id in session (for next steps)
