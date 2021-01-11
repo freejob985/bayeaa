@@ -233,7 +233,12 @@
 													{!! transformDescription($post->description) !!}
 
 
-													sssssssssssssssssssssssssssasd
+													<video width="320" height="240" controls>
+														<source src="{{Request::root()}}/public/files/{{ $post->Video}}" type="video/mp4">
+														<source src="{{Request::root()}}/public/files/{{ $post->Video}}" type="video/ogg">
+													  Your browser does not support the video tag.
+													  </video>
+													  
 												</div>
 											</div>
 											
