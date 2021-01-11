@@ -143,7 +143,9 @@ class CreateController extends FrontController
 	{
 		//dd("Catch errors for script and full tracking ( 2 )");
 
-		dd($request->Video	);
+	//	dd($request->Video	);
+
+	dd($request->all());
 		// Check possible Update
 		if (!empty($tmpToken)) {
 			session()->keep(['message']);
