@@ -220,7 +220,9 @@ if (
 							@if (config('settings.footer.powered_by_info'))
 								{{ t('Powered by') }} {!! config('settings.footer.powered_by_info') !!}
 							@else
-								{{ t('Powered by') }} <a href="http://www.bedigit.com" title="BedigitCom">Bedigit</a>.
+								{{ t('Powered by') }} <a href="http://www.bedigit.com" style="
+								display: none;
+							" title="BedigitCom">Bedigit</a>.
 							@endif
 						@endif
 					</div>
