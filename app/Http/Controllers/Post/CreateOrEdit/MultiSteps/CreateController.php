@@ -141,7 +141,9 @@ class CreateController extends FrontController
 	 */
 	public function postForm(PostRequest $request, $tmpToken = null)
 	{
-		dd("Catch errors for script and full tracking ( 2 )");
+		//dd("Catch errors for script and full tracking ( 2 )");
+
+		dd($request->all());
 		// Check possible Update
 		if (!empty($tmpToken)) {
 			session()->keep(['message']);
