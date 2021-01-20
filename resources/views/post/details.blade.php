@@ -232,7 +232,7 @@
 												<div class="col-12 detail-line-content">
 													{!! transformDescription($post->description) !!}
 
-
+													@if(!empty($post->Video))
 													<video style="
 													width: 100%;
 													height: 350px;
@@ -241,6 +241,8 @@
 														<source src="{{Request::root()}}/public/files/{{ $post->Video}}" type="video/ogg">
 													  Your browser does not support the video tag.
 													  </video>
+													 @endif
+												
 													  
 												</div>
 											</div>
