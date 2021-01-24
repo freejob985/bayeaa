@@ -3,7 +3,9 @@
 		<!-- Price -->
 		<div class="block-title has-arrow sidebar-header">
 			<h5>
-				<span class="font-weight-bold">
+				<span class="font-weight-bold" style="
+				display: none;
+			">
 					{{ (!in_array($cat->type, ['job-offer', 'job-search'])) ? t('price_range') : t('salary_range') }}
 				</span>
 			</h5>
