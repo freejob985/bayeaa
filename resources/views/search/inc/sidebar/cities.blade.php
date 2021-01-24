@@ -2,7 +2,7 @@
 <div class="block-title has-arrow sidebar-header">
 	<h5>
 		<span class="font-weight-bold">
-			{{ t('locations') }}
+			{{ t('locations') }} sssssssssss
 		</span>
 	</h5>
 </div>
