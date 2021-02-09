@@ -27,7 +27,12 @@
 							</ul>
 						</div>
 					@endif
-					
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="icon-mail"></i></span>
+						</div>
+						<input type="file" name="fileToUpload" id="fileToUpload">
+					</div>
 					@if (auth()->check())
 						<input type="hidden" name="from_name" value="{{ auth()->user()->name }}">
 						@if (!empty(auth()->user()->email))
