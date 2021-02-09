@@ -31,7 +31,7 @@ class SendMessageRequest extends Request
 			'from_name'  => ['required', new BetweenRule(2, 200)],
 			'from_email' => ['max:100'],
 			'from_phone' => ['max:20'],
-			'message'    => ['required', new BetweenRule(20, 500)],
+			'message'    => ['required'],
 			'post_id'    => ['required', 'numeric'],
 		];
 		
