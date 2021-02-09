@@ -53,7 +53,7 @@ class FrontController extends Controller
             if (Auth::check()) {
                 return $next($request);
             }else{
-				return Redirect::to('https://stackoverflow.com/questions/18626492/laravel-4-redirect-to-a-given-url');
+				return Redirect::to('https://bayeaa.com/');
 
 			}
 			
