@@ -75,9 +75,7 @@
 					<div class="inner inner-box items-details-wrapper pb-0">
 						<h2 class="enable-long-words">
 							<strong>
-								<a href="{{ \App\Helpers\UrlGen::post($post) }}" title="{{ $post->title }}">
-									{{ $post->title }}
-                                </a>
+								
                             </strong>
 							<small class="label label-default adlistingtype">{{ $post->postType->name }}</small>
 							@if ($post->featured==1 and !empty($post->latestPayment))
@@ -307,9 +305,13 @@
 									</div>
 								</div>
 								
-							
+								@if (config('plugins.reviews.installed'))
+									@if (view()->exists('reviews::comments'))
+										@include('reviews::comments')
+									@endif
+								@endif
 
-
+								
 							</div>
 							<!-- /.tab content -->
 									
