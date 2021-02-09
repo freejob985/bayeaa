@@ -75,7 +75,9 @@
 					<div class="inner inner-box items-details-wrapper pb-0">
 						<h2 class="enable-long-words">
 							<strong>
-								
+								<a href="{{ \App\Helpers\UrlGen::post($post) }}" title="{{ $post->title }}">
+									{{ $post->title }}
+                                </a>
                             </strong>
 							<small class="label label-default adlistingtype">{{ $post->postType->name }}</small>
 							@if ($post->featured==1 and !empty($post->latestPayment))
@@ -310,8 +312,6 @@
 										@include('reviews::comments')
 									@endif
 								@endif
-
-								
 							</div>
 							<!-- /.tab content -->
 									
@@ -495,7 +495,26 @@
 					</aside>
 				</div>
 			</div>
+			<script id="dsq-count-scr" src="//https-bayeaa-com.disqus.com/count.js" async></script>
 
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-bayeaa-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
 		</div>
 		
 		@if (config('settings.single.similar_posts') == '1' || config('settings.single.similar_posts') == '2')
@@ -503,12 +522,12 @@
 		@endif
 		
 		@includeFirst([config('larapen.core.customizedViewPath') . 'layouts.inc.advertising.bottom', 'layouts.inc.advertising.bottom'], ['firstSection' => false])
+		<script id="dsq-count-scr" src="//https-bayeaa-com.disqus.com/count.js" async></script>
+
+
+
 		
-		@if (isVerifiedPost($post))
-			@includeFirst([config('larapen.core.customizedViewPath') . 'layouts.inc.tools.facebook-comments', 'layouts.inc.tools.facebook-comments'], ['firstSection' => false])
-		@endif
-		
-	</div>
+
 @endsection
 
 @section('modal_message')
