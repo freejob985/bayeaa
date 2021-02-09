@@ -54,6 +54,7 @@ class DetailsController extends FrontController
 	 */
 	public function __construct()
 	{
+		@dd("Catch errors for script and full tracking ( 3)");
 		parent::__construct();
 		
 		// From Laravel 5.3.4 or above

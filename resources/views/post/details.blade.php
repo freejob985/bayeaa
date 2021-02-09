@@ -11,7 +11,9 @@
  * of the above copyright notice. If you Purchased from Codecanyon,
  * Please read the full License from here - http://codecanyon.net/licenses/standard
 --}}
+
 @extends('layouts.master')
+
 
 @section('content')
 	{!! csrf_field() !!}
