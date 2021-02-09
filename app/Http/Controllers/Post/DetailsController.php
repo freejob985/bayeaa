@@ -311,7 +311,7 @@ class DetailsController extends FrontController
 	 */
 	public function sendMessage($postId, SendMessageRequest $request)
 	{
-		dd($request->all());
+	//	dd($request->all());
 		// Get the Post
 		$post = Post::unarchived()->findOrFail($postId);
 		
