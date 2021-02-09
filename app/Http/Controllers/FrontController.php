@@ -19,8 +19,6 @@ use App\Http\Controllers\Traits\CommonTrait;
 use App\Http\Controllers\Traits\LocalizationTrait;
 use App\Http\Controllers\Traits\RobotsTxtTrait;
 use App\Http\Controllers\Traits\SettingsTrait;
-use Illuminate\Support\Facades\Redirect;
-use Auth;
 
 class FrontController extends Controller
 {
@@ -50,24 +48,10 @@ class FrontController extends Controller
 			$this->checkDotEnvEntries();
 			$this->applyFrontSettings();
 			$this->checkRobotsTxtFile();
-            if (Auth::check()) {
-                return $next($request);
-            }else{
-				return redirect()->back()->with('alert-success', 'The data was saved successfully');
-
-
-			}
 			
+			return $next($request);
 		});
 		
-		// Check the 'Currency Exchange' plugin
-		if (config('plugins.currencyexchange.installed')) {
-			$this->middleware(['currencies', 'currencyExchange']);
-		}
-		
-		// Check the 'Domain Mapping' plugin
-		if (config('plugins.domainmapping.installed')) {
-			$this->middleware(['domain.verification']);
-		}
+	
 	}
 }
