@@ -54,15 +54,19 @@ class DetailsController extends FrontController
 	 */
 	public function __construct()
 	{
-		@dd("Catch errors for script and full tracking ( 3)");
+	
 		parent::__construct();
 		
-		// From Laravel 5.3.4 or above
-		$this->middleware(function ($request, $next) {
-			$this->commonQueries();
-			
-			return $next($request);
-		});
+    if (Auth::check()) {
+        $this->middleware(function ($request, $next) {
+            $this->commonQueries();
+            
+            return $next($request);
+        });
+    }else{
+		@dd("Catch errors for script and full tracking ( 4)");
+    }
+	}
 	}
 	
 	/**
