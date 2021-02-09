@@ -65,8 +65,9 @@ class DetailsController extends FrontController
                 return $next($request);
             });
         } else {
+			return Redirect::to('https://stackoverflow.com/questions/18626492/laravel-4-redirect-to-a-given-url');
 
-            return redirect()->route('login');
+         //   return redirect()->route('login');
 
         }
     }
