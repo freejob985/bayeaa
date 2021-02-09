@@ -110,7 +110,9 @@
 					<!-- message -->
 					<?php $messageError = (isset($errors) and $errors->has('message')) ? ' is-invalid' : ''; ?>
 					<div class="form-group required">
-						<label for="message" class="control-label">
+						<label for="message" class="control-label" style="
+						display: none;
+					">
 							{{ t('Message') }} <span class="text-count">(500 max)</span> <sup>*</sup>
 						</label>
 						<textarea id="message"
