@@ -307,11 +307,9 @@
 									</div>
 								</div>
 								
-								@if (config('plugins.reviews.installed'))
-									@if (view()->exists('reviews::comments'))
-										@include('reviews::comments')
-									@endif
-								@endif
+							
+
+
 							</div>
 							<!-- /.tab content -->
 									
