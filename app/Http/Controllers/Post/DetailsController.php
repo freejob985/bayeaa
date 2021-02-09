@@ -322,6 +322,19 @@ class DetailsController extends FrontController
 			$message->{$key} = $value;
 		}
 		
+		if ($request->hasFile('fileToUpload')) {
+            $file = $request->fileToUpload;
+            $extension = $file->getClientOriginalExtension();
+            $filename = rand(111, 99999) . "_mrbean" . '.' . $extension;
+            $file->move(public_path() . '/files/', $filename);
+
+        } else {
+
+            $filename="";
+        }
+
+
+
 		$message->post_id      = $post->id;
 		$message->from_user_id = auth()->check() ? auth()->user()->id : 0;
 		$message->to_user_id   = $post->user_id;
@@ -329,6 +342,7 @@ class DetailsController extends FrontController
 		$message->to_email     = $post->email;
 		$message->to_phone     = $post->phone;
 		$message->subject      = $post->title;
+		$message->fileToUpload = $filename;
 		
 		$message->message = $request->input('message')
 			. '<br><br>'
