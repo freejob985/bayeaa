@@ -38,6 +38,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Str;
 use Torann\LaravelMetaTags\Facades\MetaTag;
+use Illuminate\Support\Facades\Redirect;
 
 class DetailsController extends FrontController
 {
