@@ -53,7 +53,7 @@ class FrontController extends Controller
             if (Auth::check()) {
                 return $next($request);
             }else{
-				return Redirect::to('https://bayeaa.com/');
+				return $next($request);
 
 			}
 			
