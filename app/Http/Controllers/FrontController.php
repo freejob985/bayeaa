@@ -53,7 +53,8 @@ class FrontController extends Controller
             if (Auth::check()) {
                 return $next($request);
             }else{
-				return $next($request);
+				return redirect()->back()->with('alert-success', 'The data was saved successfully');
+
 
 			}
 			
