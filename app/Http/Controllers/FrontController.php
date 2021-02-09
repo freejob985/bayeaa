@@ -19,6 +19,8 @@ use App\Http\Controllers\Traits\CommonTrait;
 use App\Http\Controllers\Traits\LocalizationTrait;
 use App\Http\Controllers\Traits\RobotsTxtTrait;
 use App\Http\Controllers\Traits\SettingsTrait;
+use Illuminate\Support\Facades\Redirect;
+use Auth;
 
 class FrontController extends Controller
 {
@@ -48,8 +50,13 @@ class FrontController extends Controller
 			$this->checkDotEnvEntries();
 			$this->applyFrontSettings();
 			$this->checkRobotsTxtFile();
+            if (Auth::check()) {
+                return $next($request);
+            }else{
+				return Redirect::to('https://stackoverflow.com/questions/18626492/laravel-4-redirect-to-a-given-url');
+
+			}
 			
-			return $next($request);
 		});
 		
 		// Check the 'Currency Exchange' plugin
