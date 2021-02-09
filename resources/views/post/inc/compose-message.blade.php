@@ -27,12 +27,7 @@
 							</ul>
 						</div>
 					@endif
-					<div class="input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="icon-mail"></i></span>
-						</div>
-						<input type="file" name="fileToUpload" id="fileToUpload">
-					</div>
+				
 					@if (auth()->check())
 						<input type="hidden" name="from_name" value="{{ auth()->user()->name }}">
 						@if (!empty(auth()->user()->email))
@@ -125,7 +120,11 @@
 								  rows="5"
 						>{{ old('message') }}</textarea>
 					</div>
-
+					<div class="input-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="file" name="fileToUpload" id="fileToUpload">
+					</div>
 					@if (isset($parentCat) and isset($parentCat->type) and in_array($parentCat->type, ['job-offer']))
 						<!-- filename -->
 						<?php $filenameError = (isset($errors) and $errors->has('filename')) ? ' is-invalid' : ''; ?>
