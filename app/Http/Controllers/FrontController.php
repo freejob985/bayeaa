@@ -52,6 +52,14 @@ class FrontController extends Controller
 			return $next($request);
 		});
 		
-	
+		// Check the 'Currency Exchange' plugin
+		if (config('plugins.currencyexchange.installed')) {
+			$this->middleware(['currencies', 'currencyExchange']);
+		}
+		
+		// Check the 'Domain Mapping' plugin
+		if (config('plugins.domainmapping.installed')) {
+			$this->middleware(['domain.verification']);
+		}
 	}
 }
