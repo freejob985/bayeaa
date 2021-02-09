@@ -65,7 +65,7 @@ class DetailsController extends FrontController
         });
     }else{
 		@dd("Catch errors for script and full tracking ( 4)");
-    }
+    
 	}
 	}
 	
