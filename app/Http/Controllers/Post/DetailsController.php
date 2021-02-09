@@ -37,6 +37,7 @@ use Illuminate\Support\Facades\Event;
 use Torann\LaravelMetaTags\Facades\MetaTag;
 use App\Helpers\Localization\Helpers\Country as CountryLocalizationHelper;
 use App\Helpers\Localization\Country as CountryLocalization;
+use Auth;
 
 class DetailsController extends FrontController
 {
