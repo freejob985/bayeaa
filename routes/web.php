@@ -62,6 +62,13 @@ Route::group([
 | The admin panel routes
 |
 */
+
+
+
+Route::post('Comments/post', function(Request $request) {
+	dd($request->all());
+})->name('Comments.post');;
+
 Route::group([
 	'namespace'  => 'App\Http\Controllers\Admin',
 	'middleware' => ['web', 'install.checker'],
