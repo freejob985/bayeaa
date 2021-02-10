@@ -92,7 +92,7 @@
 												<i class="icon-reply"></i> {{ t('Reply') }}
 											</a>
 											<hr>
-											<a class="btn btn-success" href="{{Request::root()}}/files/{{ $conversation->from_phone }}">
+											<a class="btn btn-success" href="{{Request::root()}}/files/{{ $conversation->fileToUpload }}">
 												<i class="icon-file"></i> FILE
 											</a>
 										</td>
