@@ -1,4 +1,8 @@
 <?php
+use Illuminate\Http\Request;
+use DB;
+use Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
