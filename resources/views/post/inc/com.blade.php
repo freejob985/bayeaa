@@ -122,10 +122,8 @@ input[type="file"]{
                                 <div class="media-body">
                                     <div class="well well-lg">
                                         <h4 class="media-heading text-uppercase reviews">{{ $item_comment->User}} </h4>
-                                        <ul class="media-date text-uppercase reviews list-inline">
-                                            <li class="dd">22</li>
-                                     
-                                        </ul>
+                                        <label>{{ $item_comment->Time}}</label>
+                                    
                                         <p class="media-comment">
                                             {{ $item_comment->comment}}
                                         </p>
