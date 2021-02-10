@@ -186,7 +186,13 @@ input[type="file"]{
                                 <div class="media-body">
                                     <div class="well well-lg">
                                         <h4 class="media-heading text-uppercase reviews">{{ $item_comment->User}} </h4>
-                                        <label>{{ time_since($item_comment->Time)}}</label>
+                                        <label style="
+                                        background: white;
+                                        font-size: 1px;
+                                        padding: 1%;
+                                        direction: ltr;
+                                        box-shadow: 0px 0px 1px 0px black;
+                                    ">{{ time_since($item_comment->Time)}}</label>
                                     
                                         <p class="media-comment">
                                             {{ $item_comment->comment}}
