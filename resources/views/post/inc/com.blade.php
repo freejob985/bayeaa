@@ -112,7 +112,7 @@ input[type="file"]{
                     <div class="tab-pane active" id="comments-logout">
                         <ul class="media-list">
 
-                            @foreach(DB::table('bayeaacomment')->orderBy('id','desc')->where('Topic',$post->id)->get() as $item_comment)
+                            @foreach(DB::table('comment')->orderBy('id','desc')->where('Topic',$post->id)->get() as $item_comment)
                             <li class="media">
                                 <a class="pull-left" href="#">
                                     <img class="media-object img-circle"
