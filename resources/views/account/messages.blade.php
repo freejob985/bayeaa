@@ -92,9 +92,11 @@
 												<i class="icon-reply"></i> {{ t('Reply') }}
 											</a>
 											<hr>
-											<a class="btn btn-success" href="{{URL::to('/')}}/files/{{ $conversation->fileToUpload }}">
+									        	@empty(!$conversation->fileToUpload )
+											<a class="btn btn-success" href="{{URL::to('/')}}/files/{{ }}">
 												<i class="fa fa-download"></i> FILE
 											</a>
+											@endempty
 										</td>
 									</tr>
 									<!-- All Conversation's Messages -->
