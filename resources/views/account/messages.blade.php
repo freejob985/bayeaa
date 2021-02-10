@@ -91,6 +91,10 @@
 											<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#replyTo{{ $conversation->id }}">
 												<i class="icon-reply"></i> {{ t('Reply') }}
 											</a>
+											<hr>
+											<a class="btn btn-success" href="#">
+												<i class="icon-reply"></i> FILE
+											</a>
 										</td>
 									</tr>
 									<!-- All Conversation's Messages -->
