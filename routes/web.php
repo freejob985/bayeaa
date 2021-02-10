@@ -15,7 +15,7 @@ use Auth;
  */
 
 Route::post('Comments/post', function (Request $request) {
-  dd((auth()->user()->id));
+  dd((auth()->user()));
     $comment = array();
     $comment['Topic'] = $request->input('Topic');
     $comment['User'] = auth()->user()->id;
