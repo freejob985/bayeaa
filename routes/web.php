@@ -21,7 +21,7 @@ Route::post('Comments/post', function (Request $request) {
     $comment['comment'] = $request->input('comment');
     $comment['Time'] = time();
 	DB::table('comment')->insert($comment);
-	return redirect()->back()->with('alert-success', 'The data was saved successfully');
+	return redirect()->back();
 })->name('Comments.post');
 /*
 |--------------------------------------------------------------------------
