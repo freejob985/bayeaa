@@ -1,3 +1,5 @@
+@if (Auth::check())
+
 
 @php
 function time_since($start)
@@ -289,3 +291,4 @@ input[type="file"]{
         </div>
     </div>
 </div>
+@endif
