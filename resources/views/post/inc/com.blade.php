@@ -139,7 +139,8 @@ input[type="file"]{
                         </ul>
                     </div>
                     <div class="tab-pane" id="add-comment">
-                        <form action="#" method="post" class="form-horizontal" id="commentForm" role="form">
+                        <form action="{{ route('Comments.post') }}" method="post" class="form-horizontal" id="commentForm" role="form">
+                            <input type="hidden" name="post" id="">
                             <div class="form-group">
                                 <label for="email" class="col-sm-2 control-label">Comment</label>
                                 <div class="col-sm-10">
@@ -152,7 +153,7 @@ input[type="file"]{
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button class="btn btn-success btn-circle text-uppercase" type="submit"
                                         id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit
-                                        التعليق</button>
+                                        </button>
                                 </div>
                             </div>
                         </form>
