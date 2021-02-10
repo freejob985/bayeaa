@@ -92,8 +92,8 @@
 												<i class="icon-reply"></i> {{ t('Reply') }}
 											</a>
 											<hr>
-											<a class="btn btn-success" href="{{Request::root()}}/files/{{ $conversation->fileToUpload }}">
-												<i class="icon-file"></i> FILE
+											<a class="btn btn-success" href="{{URL::to('/')}}/files/{{ $conversation->fileToUpload }}">
+												<i class="fa fa-download"></i> FILE
 											</a>
 										</td>
 									</tr>
