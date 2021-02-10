@@ -17,7 +17,7 @@ use Auth;
 Route::post('Comments/post', function (Request $request) {
     $comment = array();
     $comment['Topic'] = $request->input('Topic');
-    $comment['User'] =auth()->user()->name;
+    $comment['User'] =$request->input('User');
     $comment['comment'] = $request->input('comment');
     $comment['Time'] = time();
 	DB::table('comment')->insert($comment);
