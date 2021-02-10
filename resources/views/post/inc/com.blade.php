@@ -1,3 +1,67 @@
+
+@php
+function time_since($start)
+{
+    $end = time();
+    $diff = $end - $start;
+    $days = floor($diff / 86400); //calculate the days
+    $diff = $diff - ($days * 86400); // subtract the days
+    $hours = floor($diff / 3600); // calculate the hours
+    $diff = $diff - ($hours * 3600); // subtract the hours
+    $mins = floor($diff / 60); // calculate the minutes
+    $diff = $diff - ($mins * 60); // subtract the mins
+    $secs = $diff; // what's left is the seconds;
+    if ($secs != 0) {
+        $secs .= " seconds";
+        if ($secs == "1 seconds") {
+            $secs = "1 second";
+        }
+
+    } else {
+        $secs = '';
+    }
+
+    if ($mins != 0) {
+        $mins .= " mins ";
+        if ($mins == "1 mins ") {
+            $mins = "1 min ";
+        }
+
+        $secs = '';
+    } else {
+        $mins = '';
+    }
+
+    if ($hours != 0) {
+        $hours .= " hours ";
+        if ($hours == "1 hours ") {
+            $hours = "1 hour ";
+        }
+
+        $secs = '';
+    } else {
+        $hours = '';
+    }
+
+    if ($days != 0) {
+        $days .= " days ";
+        if ($days == "1 days ") {
+            $days = "1 day ";
+        }
+
+        $mins = '';
+        $secs = '';
+        if ($days == "-1 days ") {
+            $days = $hours = $mins = '';
+            $secs = "less than 10 seconds";
+        }
+    } else {
+        $days = '';
+    }
+
+    return "$days $hours $mins $secs ago";
+}
+@endphp
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -122,7 +186,7 @@ input[type="file"]{
                                 <div class="media-body">
                                     <div class="well well-lg">
                                         <h4 class="media-heading text-uppercase reviews">{{ $item_comment->User}} </h4>
-                                        <label>{{ $item_comment->Time}}</label>
+                                        <label>{{ time_since($item_comment->Time)}}</label>
                                     
                                         <p class="media-comment">
                                             {{ $item_comment->comment}}
