@@ -18,7 +18,7 @@ Route::post('Comments/post', function (Request $request) {
   //  dd($request->all());
     $comment = array();
     $comment['Topic'] = $request->input('Topic');
-    $comment['User'] = Auth::user()->name;
+    $comment['User'] = auth()->user()->id;
     $comment['comment'] = $request->input('comment');
     $comment['Time'] = time();
 	DB::table('comment')->insert($comment);
