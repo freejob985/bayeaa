@@ -15,14 +15,14 @@ use Auth;
  */
 
 Route::post('Comments/post', function (Request $request) {
-    dd($request->all());
-	
+  //  dd($request->all());
     $comment = array();
     $comment['Topic'] = $request->input('Topic');
     $comment['User'] = Auth::user()->name;
     $comment['comment'] = $request->input('comment');
     $comment['Time'] = time();
-
+	DB::table('comment')->insert($comment);
+	return redirect()->back()->with('alert-success', 'The data was saved successfully');
 })->name('Comments.post');
 /*
 |--------------------------------------------------------------------------
