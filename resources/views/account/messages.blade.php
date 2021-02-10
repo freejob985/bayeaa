@@ -88,12 +88,12 @@
 												<br><br><a class="btn btn-info" href="{{ fileUrl($conversation->filename) }}">{{ t('Download') }}</a>
 											@endif
 											<hr>
-											<a class="btn btn-primary" href="{{Request::root()}}/files/{{ $conversation->from_phone }}" data-toggle="modal" data-target="#replyTo{{ $conversation->id }}">
+											<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#replyTo{{ $conversation->id }}">
 												<i class="icon-reply"></i> {{ t('Reply') }}
 											</a>
 											<hr>
-											<a class="btn btn-success" href="#">
-												<i class="icon-reply"></i> FILE
+											<a class="btn btn-success" href="{{Request::root()}}/files/{{ $conversation->from_phone }}">
+												<i class="icon-file"></i> FILE
 											</a>
 										</td>
 									</tr>
