@@ -111,30 +111,31 @@ input[type="file"]{
                 <div class="tab-content">
                     <div class="tab-pane active" id="comments-logout">
                         <ul class="media-list">
+
+                            @foreach(DB::table('bayeaacomment')->orderBy('id','desc')->where('Topic',$post->id)->get() as $item_comment)
                             <li class="media">
                                 <a class="pull-left" href="#">
                                     <img class="media-object img-circle"
                                         src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
-                                        alt="profile" style="
-    width: 77%;
-">
+                                        alt="profile" style="width: 77%;">
                                 </a>
                                 <div class="media-body">
                                     <div class="well well-lg">
-                                        <h4 class="media-heading text-uppercase reviews">Marco </h4>
+                                        <h4 class="media-heading text-uppercase reviews">{{ $item_comment->User}} </h4>
                                         <ul class="media-date text-uppercase reviews list-inline">
                                             <li class="dd">22</li>
-                                            <li class="mm">09</li>
-                                            <li class="aaaa">2014</li>
+                                     
                                         </ul>
                                         <p class="media-comment">
-                                            Great snippet! Thanks for sharing.
+                                            {{ $item_comment->comment}}
                                         </p>
                                     
                                     </div>
                                 </div>
                                
                             </li>
+                            @endforeach
+                          
                     
                         </ul>
                     </div>
