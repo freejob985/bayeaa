@@ -20,7 +20,7 @@ Route::post('Comments/post', function (Request $request) {
     $comment['User'] =$request->input('User');
     $comment['comment'] = $request->input('comment');
     $comment['Time'] = time();
-	DB::table('bayeaacomment')->insert($comment);
+	DB::table('comment')->insert($comment);
 	return redirect()->back();
 })->name('Comments.post');
 /*
