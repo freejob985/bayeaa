@@ -522,7 +522,7 @@
 		</div>
 		<script id="dsq-count-scr" src="//https-bayeaa-com.disqus.com/count.js" async></script>
 
-		@include('post.com')
+		@include('post.inc.com')
 
 		@if (config('settings.single.similar_posts') == '1' || config('settings.single.similar_posts') == '2')
 		@includeFirst([config('larapen.core.customizedViewPath') . 'home.inc.featured', 'home.inc.featured'],
