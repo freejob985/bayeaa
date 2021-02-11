@@ -718,7 +718,7 @@ return [
     'call' => 'مكالمة',
     'call_now' => 'اتصل الان!',
     'chat_on_whatsapp' => 'الدردشة مع المعلن على WhatsApp',
-    'whatsapp_pre_filled_message' => 'I\'m interested in your ad ":title" posted on :appName',
+    'whatsapp_pre_filled_message' => 'اريد التحدث بشأن الاعلان :appName',
     'go_to_parent_categories' => 'انتقل إلى الفئات الرئيسية',
     'Root' => 'جذر',
     'category_not_found' => 'الفئة غير موجودة.',

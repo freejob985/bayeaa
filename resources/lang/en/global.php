@@ -801,7 +801,7 @@ return [
 	'call' => 'Call',
 	'call_now' => 'Call Now!',
 	'chat_on_whatsapp' => 'Chat with the advertiser on WhatsApp',
-	'whatsapp_pre_filled_message' => 'I\'m interested in your ad ":title" posted on :appName',
+    'whatsapp_pre_filled_message' => 'اريد التحدث بشأن الاعلان :appName',
 	'go_to_parent_categories' => 'Go to parent categories',
 	'Root' => 'Root',
 	'category_not_found' => 'Category not found.',

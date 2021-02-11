@@ -721,7 +721,7 @@ return [
     'call' => 'Llamada',
     'call_now' => '¡Llama ahora!',
     'chat_on_whatsapp' => 'Chatea con el(la) anunciante en WhatsApp',
-    'whatsapp_pre_filled_message' => 'I\'m interested in your ad ":title" posted on :appName',
+    'whatsapp_pre_filled_message' => 'اريد التحدث بشأن الاعلان :appName',
     'go_to_parent_categories' => 'Ir a categorías de padres',
     'Root' => 'Raíz',
     'category_not_found' => 'Categoría no encontrada.',

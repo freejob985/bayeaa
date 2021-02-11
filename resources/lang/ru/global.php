@@ -721,7 +721,7 @@ return [
     'call' => 'Вызов',
     'call_now' => 'Позвони сейчас!',
     'chat_on_whatsapp' => 'Общайтесь с рекламодателем на WhatsApp',
-    'whatsapp_pre_filled_message' => 'I\'m interested in your ad ":title" posted on :appName',
+    'whatsapp_pre_filled_message' => 'اريد التحدث بشأن الاعلان :appName',
     'go_to_parent_categories' => 'Перейти к родительским категориям',
     'Root' => 'Корень',
     'category_not_found' => 'Категория не найдена.',
