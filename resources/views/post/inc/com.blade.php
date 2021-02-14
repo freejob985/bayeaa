@@ -192,7 +192,10 @@ input[type="file"]{
                                         box-shadow: 0px 0px 1px 0px black;
                                     ">{{ time_since($item_comment->Time)}}</label>
                                     
-                                        <p class="media-comment">
+                                        <p class="media-comment" style="
+                                        font-size: 17px;
+                                        font-weight: bold;
+                                    ">
                                             {{ $item_comment->comment}}
                                         </p>
                                     
