@@ -186,7 +186,7 @@ input[type="file"]{
                                         <h4 class="media-heading text-uppercase reviews">{{ $item_comment->User}} </h4>
                                         <label style="
                                         background: white;
-                                        font-size: 1px;
+                                        font-size: 110%;
                                         padding: 1%;
                                         direction: ltr;
                                         box-shadow: 0px 0px 1px 0px black;
