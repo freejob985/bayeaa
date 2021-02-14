@@ -159,7 +159,9 @@ input[type="file"]{
 }
 .custom-input-file:hover .uploadPhoto { display: block; }
 </style>
-<div class="container">
+<div class="container" style="
+margin-top: 5%;
+">
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1" id="logout">
         
