@@ -201,31 +201,31 @@ input[type="file"]{
                                
                             </li>
                             @endforeach
-                          
+                            <div class="tab-pane" id="add-comment">
+                                <form action="{{ route('Comments.post') }}" method="post" class="form-horizontal" id="commentForm" role="form">
+                                    <input type="hidden" name="Topic" id="" value="{{ $post->id }}">
+                                    <input type="hidden" name="User" id="" value="{{ auth()->user()->name }}">
+        
+                                    <div class="form-group">
+                                        <label for="email" class="col-sm-2 control-label">Comment</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" name="comment" id="addComment"
+                                                rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button class="btn btn-success btn-circle text-uppercase" type="submit"
+                                                id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit
+                                                </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                     
                         </ul>
                     </div>
-                    <div class="tab-pane" id="add-comment">
-                        <form action="{{ route('Comments.post') }}" method="post" class="form-horizontal" id="commentForm" role="form">
-                            <input type="hidden" name="Topic" id="" value="{{ $post->id }}">
-                            <input type="hidden" name="User" id="" value="{{ auth()->user()->name }}">
-
-                            <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">Comment</label>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" name="comment" id="addComment"
-                                        rows="5"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button class="btn btn-success btn-circle text-uppercase" type="submit"
-                                        id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit
-                                        </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            
                 </div>
             </div>
         </div>
