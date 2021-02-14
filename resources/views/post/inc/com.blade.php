@@ -76,13 +76,8 @@ function time_since($start)
 */
 
 #login { display: none; }
-.login,
-.logout { 
-    position: absolute; 
-    top: -3px;
-    right: 0;
-}
-.page-header { position: relative; }
+
+
 .reviews {
     color: #555;    
     font-weight: bold;
@@ -184,7 +179,7 @@ input[type="file"]{
                                 <a class="pull-left" href="#">
                                     <img class="media-object img-circle"
                                         src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
-                                        alt="profile" style="width: 77%; display: none;">
+                                        alt="profile" style="width: 77%;">
                                 </a>
                                 <div class="media-body">
                                     <div class="well well-lg">
