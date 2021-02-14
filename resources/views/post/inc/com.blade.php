@@ -179,7 +179,7 @@ input[type="file"]{
                                 <a class="pull-left" href="#">
                                     <img class="media-object img-circle"
                                         src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
-                                        alt="profile" style="width: 77%;">
+                                        alt="profile" style="width: 77%; display: none;">
                                 </a>
                                 <div class="media-body">
                                     <div class="well well-lg">
