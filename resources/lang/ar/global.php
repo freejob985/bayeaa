@@ -54,7 +54,7 @@ return [
     'list_of_categories_and_sub_categories' => 'قائمة الفئات والفئات الفرعية',
     'list_of_cities_in' => 'List of Cities in',
     'do_have_anything_to_sell_or_rent' => 'هل لديك أي شيء للبيع أو الإيجار؟',
-    'sell_products_and_services_online_for_free' => 'بيع المنتجات والخدمات الخاصة بك على الانترنت مجانا. وأسهل مما كنت اعتقد !',
+    'sell_products_and_services_online_for_free' => 'بيع المنتجات والخدمات الخاصة بك على الانترنت مجانا. وأسهل من ما كنت اعتقد !',
     'footer_note' => '<strong>يبيع</strong>, <strong>عرض</strong>, <strong>تأجير</strong>, <strong>صفقة</strong>, <strong>بحث</strong>, <strong>يشترى</strong> المنتجات والخدمات في <strong>:country</strong>. انها 100٪ مجانا!',
     'home' => 'الصفحة الرئيسية',
     'about_us' => 'معلومات عنا',
