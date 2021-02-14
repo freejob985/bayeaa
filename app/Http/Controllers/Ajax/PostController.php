@@ -77,7 +77,6 @@ class PostController extends FrontController
 	 */
 	public function saveSearch(Request $request)
 	{
-		dd($request->all());
 		$queryUrl = $request->input('url');
 		$tmp = parse_url($queryUrl);
 		$query = $tmp['query'];
