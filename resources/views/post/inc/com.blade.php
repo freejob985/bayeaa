@@ -77,7 +77,9 @@ function time_since($start)
 
 #login { display: none; }
 
-
+img.tooltipHere.main-logo {
+    width: 78px !important;
+}
 .reviews {
     color: #555;    
     font-weight: bold;
