@@ -90,10 +90,7 @@ class PostController extends FrontController
 		$status = 0;
 		if (auth()->check()) {
 			$savedSearch = SavedSearch::where('user_id', auth()->user()->id)->where('keyword', $keyword)->where('query', $query);
-			if ($savedSearch->count() > 0) {
-				// Delete SavedSearch
-				$savedSearch->delete();
-			} else {
+		
 				// Store SavedSearch
 				$savedSearchInfo = [
 					'country_code' => config('country.code'),
@@ -105,7 +102,7 @@ class PostController extends FrontController
 				$savedSearch = new SavedSearch($savedSearchInfo);
 				$savedSearch->save();
 				$status = 1;
-			}
+			
 		}
 		
 		$result = [
