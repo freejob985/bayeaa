@@ -165,10 +165,14 @@ input[type="file"]{
         
             <div class="comment-tabs">
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#comments-logout" role="tab" data-toggle="tab">
+                    <li class="active"><a href="#comments-logout" role="tab" data-toggle="tab" style="
+                        display: none;
+                    ">
                             <h4 class="reviews text-capitalize">Comments</h4>
                         </a></li>
-                    <li><a href="#add-comment" role="tab" data-toggle="tab">
+                    <li style="
+                    display: none;
+                "><a href="#add-comment" role="tab" data-toggle="tab">
                             <h4 class="reviews text-capitalize">Add comment</h4>
                         </a></li>
                 </ul>
