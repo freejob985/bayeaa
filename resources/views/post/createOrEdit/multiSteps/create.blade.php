@@ -93,7 +93,10 @@
 											<div class="col-md-8">
 												<input id="Video" name="Video" placeholder="Video" class="form-control "
 													   type="file" value="{{ old('Video') }}" accept="video/mp4,video/x-m4v,video/*">
-													   <small id="" class="form-text text-muted"> (وضع فيديو اكثر من 20 ثانية يؤدي الى تعليق الموقع)</small>
+													   <small id="" class="form-text text-muted" style="
+													   color: red !important;
+													   font-weight: bold;
+												   "> (وضع فيديو اكثر من 20 ثانية يؤدي الى تعليق الموقع)</small>
 
 											</div>
 										</div>
