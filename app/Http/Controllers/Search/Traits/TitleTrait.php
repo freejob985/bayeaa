@@ -122,11 +122,13 @@ trait TitleTrait
 				$searchUrl = qsUrl($searchUrl, request()->except(['l', 'r', 'location']), null, false);
 			}
 			
+
+			
 			if (request()->filled('r') && !request()->filled('l')) {
 				// Administrative Division
 				if (isset($this->admin) && !empty($this->admin)) {
 					$htmlTitle .= ' ' . t('in') . ' ';
-					$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="' . $searchUrl . '">';
+					$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="@">';
 					$htmlTitle .= $this->admin->name;
 					$htmlTitle .= '</a>';
 				}
