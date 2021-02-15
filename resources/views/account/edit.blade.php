@@ -335,7 +335,9 @@
 										
 											@if (config('settings.single.activation_facebook_comments') and config('services.facebook.client_id'))
 												<!-- disable_comments -->
-												<div class="form-group row">
+												<div class="form-group row" style="
+												display: none;
+											">
 													<label class="col-md-3 col-form-label"></label>
 													<div class="col-md-9">
 														<div class="form-check form-check-inline pt-2">
