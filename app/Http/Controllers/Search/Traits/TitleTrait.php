@@ -122,13 +122,11 @@ trait TitleTrait
 				$searchUrl = qsUrl($searchUrl, request()->except(['l', 'r', 'location']), null, false);
 			}
 			
-
-			
 			if (request()->filled('r') && !request()->filled('l')) {
 				// Administrative Division
 				if (isset($this->admin) && !empty($this->admin)) {
 					$htmlTitle .= ' ' . t('in') . ' ';
-					$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="@">';
+					$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="' . $searchUrl . '">';
 					$htmlTitle .= $this->admin->name;
 					$htmlTitle .= '</a>';
 				}
@@ -137,7 +135,7 @@ trait TitleTrait
 				if (isset($this->city) && !empty($this->city)) {
 					if (config('settings.listing.cities_extended_searches')) {
 						$htmlTitle .= ' ' . t('within') . ' ';
-						$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="@2">';
+						$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="' . $searchUrl . '">';
 						$htmlTitle .= t('x_distance_around_city', [
 							'distance' => ($this->searchClass::$distance == 1) ? 0 : $this->searchClass::$distance,
 							'unit'     => getDistanceUnit(config('country.code')),
@@ -145,7 +143,7 @@ trait TitleTrait
 						$htmlTitle .= '</a>';
 					} else {
 						$htmlTitle .= ' ' . t('in') . ' ';
-						$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="@3">';
+						$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="' . $searchUrl . '">';
 						$htmlTitle .= $this->city->name;
 						$htmlTitle .= '</a>';
 					}
@@ -168,7 +166,7 @@ trait TitleTrait
 							$searchUrl = qsUrl($searchUrl, request()->except(['sc']), null, false);
 						}
 						
-						$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="@4">';
+						$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="' . $searchUrl . '">';
 						$htmlTitle .= $this->subCat->name;
 						$htmlTitle .= '</a>';
 					}
@@ -184,7 +182,7 @@ trait TitleTrait
 					$searchUrl = qsUrl($searchUrl, request()->except(['c']), null, false);
 				}
 				
-				$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="@6">';
+				$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="' . $searchUrl . '">';
 				$htmlTitle .= $this->cat->name;
 				$htmlTitle .= '</a>';
 			}
@@ -195,7 +193,7 @@ trait TitleTrait
 			if (isset($this->tag) && !empty($this->tag)) {
 				$htmlTitle .= ' ' . t('for') . ' ';
 				$attr = ['countryCode' => config('country.icode')];
-				$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="@5">';
+				$htmlTitle .= '<a rel="nofollow" class="jobs-s-tag" href="' . lurl(trans('routes.v-search', $attr), $attr) . '">';
 				$htmlTitle .= $this->tag;
 				$htmlTitle .= '</a>';
 			}
