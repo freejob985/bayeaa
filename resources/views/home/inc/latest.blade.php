@@ -161,7 +161,6 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 								<div class="detail-line-lite col-md-6 col-sm-6 col-xs-6">
 									<div>
 										<span>
-											{{ (!in_array($post->category->type, ['job-offer', 'job-search'])) ? t('price') : t('Salary') }}:
 										</span>
 										<span>
 											@if ($post->price > 0)
