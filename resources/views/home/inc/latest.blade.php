@@ -145,7 +145,7 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 								<h4 class="item-price">
 									@if (isset($liveCat->type))
 										@if (!in_array($liveCat->type, ['not-salable']))
-											@if ($post->price > 0)
+											@if (!$post->price > 0)
 												{!! \App\Helpers\Number::money($post->price) !!}
 											@else
 												{!! \App\Helpers\Number::money('--') !!}
@@ -156,30 +156,10 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 									@endif
 								</h4>
 
-					
-								<!-- Price / Salary -->
-								<div class="detail-line-lite col-md-6 col-sm-6 col-xs-6">
-									<div>
-										<span>
-										</span>
-										<span>
-											@if ($post->price > 0)
-											{!! \App\Helpers\Number::money($post->price) !!}
-											@else
-											{!! \App\Helpers\Number::money(' --') !!}
-											@endif
-											@if ($post->negotiable == 1)
-											<small class="label badge-success">
-												{{ t('negotiable') }}</small>
-											@endif
-										</span>
-									</div>
-								</div>
-					
 
 
 
-
+								
 								@if (isset($package) and !empty($package))
 									@if ($package->has_badge == 1)
 										<a class="btn btn-danger btn-sm make-favorite"><i class="fa fa-certificate"></i><span> {{ $package->short_name }} </span></a>&nbsp;
