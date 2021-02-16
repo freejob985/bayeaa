@@ -152,7 +152,10 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 											@endif
 										@endif
 									@else
-										{{ '--' }}
+									@if ($post->negotiable == 1)
+									<small class="label badge-success">
+										{{ t('negotiable') }}</small>
+									@endif
 										<small class="label badge-success">
 											{{ t('negotiable') }}</small>
 									@endif
