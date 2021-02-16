@@ -146,7 +146,7 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 									@if (isset($liveCat->type))
 										@if (!in_array($liveCat->type, ['not-salable']))
 											@if ($post->price > 0)
-												{!! $post->price !!}
+												{!! $post->negotiable !!}
 											@else
 												{!! \App\Helpers\Number::money('--') !!}
 											@endif
