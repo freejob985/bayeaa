@@ -145,7 +145,7 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 								<h4 class="item-price">
 									@if (isset($liveCat->type))
 										@if (!in_array($liveCat->type, ['not-salable']))
-											@if (!$post->price > 0)
+											@if ($post->price > 0)
 												{!! \App\Helpers\Number::money($post->price) !!}
 											@else
 												{!! \App\Helpers\Number::money('--') !!}
