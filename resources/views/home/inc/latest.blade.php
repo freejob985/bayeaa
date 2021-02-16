@@ -146,12 +146,8 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 									@if (isset($liveCat->type))
 										@if (!in_array($liveCat->type, ['not-salable']))
 											@if ($post->price > 0)
-											@if (\App\Helpers\Number::money($post->price) == "--")
-											<small class="label badge-success">
-												{{ t('negotiable') }}</small>
-												@else
+											
 												{!! \App\Helpers\Number::money($post->price) !!}
-												@endif
 											@else
 											//	{!! \App\Helpers\Number::money('--') !!}
 											@endif
