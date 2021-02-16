@@ -155,6 +155,32 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 										{{ '--' }}
 									@endif
 								</h4>
+
+								@if (!in_array($post->category->type, ['not-salable']))
+								<!-- Price / Salary -->
+								<div class="detail-line-lite col-md-6 col-sm-6 col-xs-6">
+									<div>
+										<span>
+											{{ (!in_array($post->category->type, ['job-offer', 'job-search'])) ? t('price') : t('Salary') }}:
+										</span>
+										<span>
+											@if ($post->price > 0)
+											{!! \App\Helpers\Number::money($post->price) !!}
+											@else
+											{!! \App\Helpers\Number::money(' --') !!}
+											@endif
+											@if ($post->negotiable == 1)
+											<small class="label badge-success">
+												{{ t('negotiable') }}</small>
+											@endif
+										</span>
+									</div>
+								</div>
+								@endif
+
+
+
+
 								@if (isset($package) and !empty($package))
 									@if ($package->has_badge == 1)
 										<a class="btn btn-danger btn-sm make-favorite"><i class="fa fa-certificate"></i><span> {{ $package->short_name }} </span></a>&nbsp;
