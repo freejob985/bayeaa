@@ -156,7 +156,7 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 									@endif
 								</h4>
 
-								@if (!in_array($post->category->type, ['not-salable']))
+					
 								<!-- Price / Salary -->
 								<div class="detail-line-lite col-md-6 col-sm-6 col-xs-6">
 									<div>
@@ -175,7 +175,7 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 										</span>
 									</div>
 								</div>
-								@endif
+					
 
 
 
