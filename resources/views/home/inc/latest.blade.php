@@ -144,7 +144,7 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 							<div class="{{ $colPriceBox }} text-right price-box">
 								<h4 class="item-price">
 									@if (isset($liveCat->type))
-										@if (in_array($liveCat->type, ['not-salable']))
+										@if (!in_array($liveCat->type, ['not-salable']))
 											@if ($post->price > 0)
 												{!! \App\Helpers\Number::money($post->price) !!}
 											@else
@@ -155,9 +155,6 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 										{{ '--' }}
 									@endif
 								</h4>
-
-
-								
 								@if (isset($package) and !empty($package))
 									@if ($package->has_badge == 1)
 										<a class="btn btn-danger btn-sm make-favorite"><i class="fa fa-certificate"></i><span> {{ $package->short_name }} </span></a>&nbsp;
