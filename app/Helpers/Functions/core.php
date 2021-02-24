@@ -3043,13 +3043,13 @@ function genEmailContactBtn($post = null, $btnBlock = false, $iconOnly = false)
 	
 	$btnLink = '#contactUser';
 	$btnClass = '';
-	if (!auth()->check()) {
+	if (auth()->check()) {
 		if (config('settings.single.guests_can_contact_ads_authors') != '1') {
 			$btnLink = '#quickLogin';
 		}
 	}
 	
-	if (!$iconOnly) {
+	if ($iconOnly) {
 		$out .= '<a href="' . $btnLink . '" data-toggle="modal">';
 		$out .= '<i class="icon-mail-2 tooltipHere" data-toggle="tooltip" data-original-title="' . t('Send a message') . '"></i>';
 		$out .= '</a>';
