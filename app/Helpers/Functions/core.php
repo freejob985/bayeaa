@@ -3043,7 +3043,7 @@ function genEmailContactBtn($post = null, $btnBlock = false, $iconOnly = false)
 	
 	$btnLink = '#contactUser';
 	$btnClass = '';
-	if (auth()->check()) {
+	if (!auth()->check()) {
 		if (config('settings.single.guests_can_contact_ads_authors') != '1') {
 			$btnLink = '#quickLogin';
 		}
