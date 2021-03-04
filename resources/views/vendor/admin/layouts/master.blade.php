@@ -68,7 +68,7 @@
         </div>
         
         {{-- Footer --}}
-        <footer class="footer">
+        <footer class="footer" style="display:none!important;">
             <div class="row">
                 <div class="col-md-6 text-left">
                     {{ trans('admin.Version') }} {{ config('app.version') }}

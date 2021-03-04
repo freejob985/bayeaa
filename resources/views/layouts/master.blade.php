@@ -1,15 +1,5 @@
 {{--
- * LaraClassified - Classified Ads Web Application
- * Copyright (c) BedigitCom. All Rights Reserved
- *
- * Website: http://www.bedigit.com
- *
- * LICENSE
- * -------
- * This software is furnished under a license and may be used and copied
- * only in accordance with the terms of such license and with the inclusion
- * of the above copyright notice. If you Purchased from Codecanyon,
- * Please read the full License from here - http://codecanyon.net/licenses/standard
+ 
 --}}
 <?php
 	$rawFullUrl = url(\Illuminate\Support\Facades\Request::getRequestUri());
@@ -152,6 +142,37 @@
 			@endif
 		@endif
 	@show
+	
+	
+	<style>html,body,html[dir=rtl] body{overflow-x:hidden!important;}
+	#homepage.main-container {
+    padding-top: 70px;
+}.navbar.navbar-site .navbar-identity .navbar-brand {
+    height: 91px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+}.page-sidebar.mobile-filter-sidebar {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 0;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    z-index: 1110;
+    right: 0;left:0;
+}a.badge.badge-light {
+    font-size: 16px;
+    color: #1e1d1d;
+    padding: 8px;
+}
+	@media (max-width: 767px){
+.navbar-site.navbar .navbar-identity {
+    height: 125px;
+    border-bottom: 0;
+}}
+	</style>
 </head>
 <body class="{{ config('app.skin') }}">
 <div id="wrapper">

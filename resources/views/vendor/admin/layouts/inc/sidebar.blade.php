@@ -196,7 +196,7 @@
 							</a>
 							<ul aria-expanded="false" class="collapse first-level">
 								@if (auth()->user()->can('list-setting') || userHasSuperAdminPermissions())
-									<li class="sidebar-item">
+									<li style="display:none!important;" class="sidebar-item">
 										<a href="{{ admin_url('settings') }}" class="sidebar-link">
 											<i class="mdi mdi-adjust"></i>
 											<span class="hide-menu">{{ trans('admin.general settings') }}</span>
@@ -204,7 +204,7 @@
 									</li>
 								@endif
 								@if (auth()->user()->can('list-home-section') || userHasSuperAdminPermissions())
-									<li class="sidebar-item">
+									<li style="display:none!important;" class="sidebar-item">
 										<a href="{{ admin_url('homepage') }}" class="sidebar-link">
 											<i class="mdi mdi-adjust"></i>
 											<span class="hide-menu">{{ trans('admin.homepage') }}</span>
@@ -310,21 +310,21 @@
 					@endif
 					
 					@if (auth()->user()->can('list-plugin') || userHasSuperAdminPermissions())
-						<li class="sidebar-item">
+						<li style="display:none!important;" class="sidebar-item">
 							<a href="{{ admin_url('plugins') }}" class="sidebar-link">
 								<i data-feather="package" class="feather-icon"></i> <span class="hide-menu">{{ trans('admin.plugins') }}</span>
 							</a>
 						</li>
 					@endif
 					@if (auth()->user()->can('clear-cache') || userHasSuperAdminPermissions())
-						<li class="sidebar-item">
+						<li style="display:none!important;" class="sidebar-item">
 							<a href="{{ admin_url('actions/clear_cache') }}" class="sidebar-link">
 								<i data-feather="refresh-cw" class="feather-icon"></i> <span class="hide-menu">{{ trans('admin.clear cache') }}</span>
 							</a>
 						</li>
 					@endif
 					@if (auth()->user()->can('list-backup') || userHasSuperAdminPermissions())
-						<li class="sidebar-item">
+						<li style="display:none!important;" class="sidebar-item">
 							<a href="{{ admin_url('backups') }}" class="sidebar-link">
 								<i data-feather="hard-drive" class="feather-icon"></i> <span class="hide-menu">{{ trans('admin.backups') }}</span>
 							</a>
@@ -338,7 +338,7 @@
 					)
 						@if (app()->isDownForMaintenance())
 							@if (auth()->user()->can('maintenance-up') || userHasSuperAdminPermissions())
-								<li class="sidebar-item">
+								<li style="display:none!important;" class="sidebar-item">
 									<a href="{{ admin_url('actions/maintenance_up') }}"
 									   data-toggle="tooltip"
 									   title="{{ trans('admin.Leave Maintenance Mode') }}"
@@ -350,7 +350,7 @@
 							@endif
 						@else
 							@if (auth()->user()->can('maintenance-down') || userHasSuperAdminPermissions())
-								<li class="sidebar-item">
+								<li style="display:none!important;" class="sidebar-item">
 									<a href="#"
 									   data-toggle="modal"
 									   data-target="#maintenanceMode"

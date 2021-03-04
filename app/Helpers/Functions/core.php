@@ -3050,8 +3050,9 @@ function genEmailContactBtn($post = null, $btnBlock = false, $iconOnly = false)
 	}
 	
 	if ($iconOnly) {
-		$out .= '<a href="' . $btnLink . '" data-toggle="modal">';
-		$out .= '<i class="icon-mail-2 tooltipHere" data-toggle="tooltip" data-original-title="' . t('Send a message') . '"></i>';
+		$out .= '<a href="' . $btnLink . '" class="btn btn-default' . $btnClass . '" data-toggle="modal">';
+		$out .= '<i class="far fa-envelope-open"></i> ';
+		$out .= t('Send a message');
 		$out .= '</a>';
 	} else {
 		if ($btnBlock) {

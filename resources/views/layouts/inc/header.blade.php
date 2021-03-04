@@ -36,7 +36,7 @@ if (getSegment(1) != trans('routes.countries')) {
 			<div class="navbar-identity">
 				{{-- Logo --}}
 				<a href="{{ lurl('/') }}" class="navbar-brand logo logo-title">
-					<img src="{{ imgUrl(config('settings.app.logo'), 'logo') }}"
+					<img style="width:100px;height:auto;" src="{{ imgUrl(config('settings.app.logo'), 'logo') }}"
 						 alt="{{ strtolower(config('settings.app.app_name')) }}" class="tooltipHere main-logo" title="" data-placement="bottom"
 						 data-toggle="tooltip"
 						 data-original-title="{!! isset($logoLabel) ? $logoLabel : '' !!}"/>

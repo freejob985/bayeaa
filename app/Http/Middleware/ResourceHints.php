@@ -32,8 +32,7 @@ class ResourceHints
 		
 		// Exceptions
 		if (
-			empty($response->getContent())
-			|| Str::contains(Route::currentRouteAction(), 'InstallController')
+			 Str::contains(Route::currentRouteAction(), 'InstallController')
 			|| Str::contains(Route::currentRouteAction(), 'UpgradeController')
 		) {
 			return $response;

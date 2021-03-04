@@ -152,7 +152,8 @@ if (isset($latestOptions, $latestOptions['hide_on_mobile']) and $latestOptions['
 												{!! \App\Helpers\Number::money($post->price) !!}
 										
 											@else
-											//	{!! \App\Helpers\Number::money('--') !!}
+										<small class="label badge-success">
+															{{ t('negotiable') }}</small>
 											@endif
 										@endif
 									@else

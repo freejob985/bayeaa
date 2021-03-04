@@ -227,7 +227,7 @@ margin-top: 5%;
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <button class="btn btn-success btn-circle text-uppercase" type="submit"
-                                                id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit
+                                                id="submitComment"> ارسال
                                                 </button>
                                         </div>
                                     </div>
@@ -284,8 +284,8 @@ margin-top: 5%;
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button class="btn btn-success btn-circle text-uppercase disabled" type="submit"
-                                        id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit
-                                        comment</button>
+                                        id="submitComment">أرسال
+                                        </button>
                                 </div>
                             </div>
                         </form>

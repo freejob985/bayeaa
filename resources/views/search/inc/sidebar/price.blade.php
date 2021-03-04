@@ -3,14 +3,12 @@
 		<!-- Price -->
 		<div class="block-title has-arrow sidebar-header">
 			<h5>
-				<span class="font-weight-bold" >
+				<span class="font-weight-bold">
 					{{ (!in_array($cat->type, ['job-offer', 'job-search'])) ? t('price_range') : t('salary_range') }}
 				</span>
 			</h5>
 		</div>
-		<div class="block-content list-filter" style="
-		display: none;
-	">
+		<div class="block-content list-filter">
 			<form role="form" class="form-inline" action="{{ request()->url() }}" method="GET">
 				{!! csrf_field() !!}
 				@foreach(request()->except(['page', 'minPrice', 'maxPrice', '_token']) as $key => $value)
